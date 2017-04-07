@@ -7,7 +7,7 @@ import {
     Image,
     Text,
     View,
-    TouchableHighlight
+    TouchableWithoutFeedback,
 } from 'react-native';
 const CB_ENABLED_IMAGE = require('./cb_enabled.png');
 const CB_DISABLED_IMAGE = require('./cb_disabled.png');
@@ -84,9 +84,9 @@ class CheckBox extends Component {
         }
 
         return (
-            <TouchableHighlight onPress={this.onChange} underlayColor={this.props.underlayColor} style={styles.flexContainer}>
+            <TouchableWithoutFeedback onPress={this.onChange} underlayColor={this.props.underlayColor} style={styles.flexContainer}>
                 {container}
-            </TouchableHighlight>
+            </TouchableWithoutFeedback>
         );
     }
 }
